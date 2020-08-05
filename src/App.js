@@ -26,11 +26,13 @@ class App extends React.Component {
     this.setState({ search: inputValue })
   }
 
-  handleSortClick() {
-    this.state.pokeState.sort((a, b) => {
-      return a.attack - b.attack
-    })
-  }
+  // handleSortClick = () => {
+  //   console.log('*****HELLO*****');
+  //   console.log(this.state);
+  //   this.state.pokeState.sort(function (a, b) {
+  //     return Number(a.attack) - Number(b.attack);
+  //   })
+  // }
   
 
 render() {
