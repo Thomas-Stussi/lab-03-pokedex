@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import request from 'superagent';
+import './DetailPage.css'
+import { Link } from 'react-router-dom';
 
 export default class DetailPage extends Component {
     state = { pokemon: {} }
@@ -19,19 +21,25 @@ export default class DetailPage extends Component {
         const { pokemon } = this.state;
 
         return (
-            <div>
+            <section>
                 {
                     pokemon 
                         && <div>
-                        <p>{pokemon.pokemon}</p>
+                        <h1>{pokemon.pokemon}</h1>
+                        <Link to={`${pokemon.pokedex}`}>Pokedex Entry</Link>
                         <p>Defense: {pokemon.defense}</p>
                         <p>Attack: {pokemon.attack}</p>
                         <p>Types: {pokemon.type_1}, {pokemon.type_2}</p>
-                        <img src={pokemon.url_image} alt={pokemon.pokemon} />
                     </div>
+                }
+                {
+                    pokemon
+                        && <div>
+                            <img src={pokemon.url_image} alt={pokemon.pokemon} />
+                        </div>
                     
                 }
-            </div>
+            </section>
         )
     }
 }
