@@ -4,10 +4,10 @@ import Nav from './Nav.js'
 export default class Header extends Component {
     render() {
         return (
-            <div>
+            <header>
                 <h3>Gotta Catch 'Em All!</h3>
                 <Nav />
-            </div>
+            </header>
         )
     }
 }
