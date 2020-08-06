@@ -38,11 +38,13 @@ class App extends React.Component {
 render() {
 
   return (
-    <>
+    <body>
       <Header />
+      <main>
       <Params handleSearchClick={this.handleSearchClick} handleSearchInput={this.handleSearchInput} handleSortClick={this.handleSortClick} />
       <PokemonList pokemonArray={this.state.pokeState} />
-    </>
+      </main>
+    </body>
   );
 }
  
