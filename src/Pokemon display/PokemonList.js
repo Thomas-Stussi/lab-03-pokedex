@@ -6,7 +6,6 @@ export default class PokemonList extends Component {
     render() {
         return (
             <div className="pokelist">
-                Here Are Your Results!
                 {
                     this.props.pokemonArray.map(poke => <PokemonItem poke={poke}/>)
                 }
