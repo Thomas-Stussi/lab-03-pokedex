@@ -1,13 +1,20 @@
+@font-face {font-family: "Pokemon"; src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot"); src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg"); 
+}
+ 
  html {
   height: 100%;
 } 
+
 body {
+  font-family: "Pokemon";
+  color: yellow;
+  text-shadow: 2px 2px blue;
   display: flex;
   flex-direction: column;
-  background-color: saddlebrown;
+  background-color: black;
   align-items: center;
-
 }
+
 header {
   width: 700px;
   display: flex;
@@ -17,34 +24,42 @@ header {
   justify-content: center;
   border-bottom: black solid 2px;
 }
+
 main {
   width: 100%;
   height: 100%;
   background-color: darkolivegreen;
   display: grid;
   grid-template-columns: 200px 500px;
-
 }
+
 .params {
   border: black solid 2px;
 }
+
 .pokelist {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   border: black solid 2px;
 }
+
 .imgDisplay {
   height: 100px;
   width: auto;
+  -webkit-filter: saturate(130%) contrast(115%) drop-shadow(5px 5px 3px);
+  filter: saturate(130%) contrast(115%) drop-shadow(5px 5px 3px);
 }
+
 .right {
-  text-align: center;
+  text-align: right;
 }
+
 input {
   height: 30px;
   width: 190px;
 }
+
 .itemBox {
   height: 200px;
   width: 150px;
