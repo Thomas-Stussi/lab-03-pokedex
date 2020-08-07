@@ -92,7 +92,7 @@ render() {
   return (
     <body>
       <main>
-      <Params handleSearchClick={this.handleSearchClick} handleSearchInput={this.handleSearchInput} handleSortClick={this.handleSortClick} handleSelectChange={this.handleSelectChange}  />
+      <Params handleSearchClick={this.handleSearchClick} handleSearchInput={this.handleSearchInput} handleSortClick={this.handleSortClick} handleSelectChange={this.handleSelectChange} search={this.state.search} searchBy={this.state.searchBy} />
       <PokemonList pokemonArray={this.state.pokeState}  handleNextClick={this.handleNextClick} handlePrevClick={this.handlePrevClick} 
                 currentPage={currentPage}
                 pokeState={pokeState}
