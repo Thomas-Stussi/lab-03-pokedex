@@ -35,7 +35,7 @@ export default class DetailPage extends Component {
                 {
                     pokemon
                         && <div>
-                            <img src={pokemon.url_image} alt={pokemon.pokemon} />
+                            <img className="detailImage" src={pokemon.url_image} alt={pokemon.pokemon} />
                         </div>
                     
                 }
