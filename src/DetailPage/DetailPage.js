@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent';
 import './DetailPage.css'
-import { Link } from 'react-router-dom';
 
 export default class DetailPage extends Component {
     state = { pokemon: {} }
@@ -26,7 +25,7 @@ export default class DetailPage extends Component {
                     pokemon 
                         && <div>
                         <h1>{pokemon.pokemon}</h1>
-                        <Link to={`${pokemon.pokedex}`}>Pokedex Entry</Link>
+                        <a href={`${pokemon.pokedex}`}>Pokedex Entry</a>
                         <p>Defense: {pokemon.defense}</p>
                         <p>Attack: {pokemon.attack}</p>
                         <p>Types: {pokemon.type_1}, {pokemon.type_2}</p>
