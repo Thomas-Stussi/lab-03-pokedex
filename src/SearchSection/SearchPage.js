@@ -33,14 +33,12 @@ class SearchPage extends React.Component {
   }
 
   makeRequest = async () => {
-    this.setState({ isLoading: true });
     
     const data = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?page=${this.state.currentPage}&perPage=20&${this.state.searchBy}=${this.state.search}`);
 
     await this.setState({ 
       pokeState: data.body.results,
       totalPages: Math.ceil(data.body.count / 20),
-      isLoading: false,
      })
 
      const params = new URLSearchParams(this.props.location.search);
@@ -65,7 +63,6 @@ class SearchPage extends React.Component {
     await this.makeRequest();
   }
 
-  //add a click handler
   handleSearchClick = async () => {
     await this.setState({
       currentPage: 1
