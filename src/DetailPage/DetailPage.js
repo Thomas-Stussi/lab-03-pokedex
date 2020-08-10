@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent';
 import './DetailPage.css'
-import { Link } from 'react-router-dom';
 
 export default class DetailPage extends Component {
     state = { pokemon: {} }
